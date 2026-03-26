@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  chatbot:
+    build: .
+    env_file:
+      - .env
+    volumes:
+      - ./app/data:/app/app/data
+    stdin_open: true
+    tty: true
+    restart: unless-stopped
